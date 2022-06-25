@@ -1,0 +1,17 @@
+nano /tmp/script.sh   -> opening nano text editor
+#!/bin/bash  -> create sctipt
+chmod +x /tmp/script.sh ->make the file executable
+ls -la /location/file - to see properties and permissions for the file
+mv /tmp/script.sh\ /tmp/script.sh - renaming the file
+pwd - Print Working Directory
+
+
+
+NAME=Akan
+
+for run in {1..10}
+do
+echo $run
+echo Hello $NAME
+sleep 1
+done

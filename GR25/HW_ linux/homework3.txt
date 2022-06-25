@@ -1,0 +1,42 @@
+1. mkdir -p /home/user/start  //создав перед этим необходимую директорию.
+2. touch /home/user/start/1.txt    //Создать текстовый файл /home/user/start/1.txt
+3. echo Start >> /home/user/start/1.txt //Добавить слово Start в текстовый документ, созданный ранее.
+4. date >> /home/user/start/1.txt    //Дописать в конец документа текущую дату, использовав date (запуск командой date).
+5. mkdir -p opt/task   //(Предварительно создаем необходимую директорию)
+6. cp /home/user/start/1.txt /opt/task/start.txt    //Скопировать получившийся документ в /opt/task/start.txt 
+7. ls -la | tail -8 >> /opt/task/start.txt   //В документ /opt/task/start.txt дописать последние 8 строчек из списка 
+                                            всех файлов (и скрытых), лежащих в / я на всякий случай зашел в корневую директорию сперва
+8. touch /opt/users.txt    //Создайте текстовый документ users в папке /opt.
+9. date | head -1 >> /opt/users.txt     //Первой строкой добавьте дату использовав date
+10.ls /etc/group | tail -10  >> /opt/users.txt     //Добавьте последние 10 строчек из /etc/group
+
+
+localhost:/# cat /tmp/history.txt
+   0 mkdir -p /home/user/start
+   1 cd /home/user/start
+   2 touch 1.txt
+   3 ls
+   4 echo start >> 1.txt
+   5 cat 1.txt
+   6 date
+   7 date >> 1.txt
+   8 cat 1.txt
+   9 cd ..
+  10 mkdir -p opt/task
+  11 cd /opt/task
+  12 cp /home/user/start/1.txt /opt/task/start.txt
+  13 cat start.txt
+  14 cd ..
+  15 ls -la | tail -8 >> /opt/task/start.txt
+  16 cat /opt/task/start.txt
+  17 ls la
+  18 ls -l -a
+  19 touch /opt/users.txt
+  20 date | head -1 >> /opt/users.txt
+  21 cat /opt/users.txt
+  22 ls /etc/group | tail -10 >> /opt/users.txt
+  23 cat /opt/users.txt
+  24 history > /tmp/history.txt
+localhost:/# 
+
+

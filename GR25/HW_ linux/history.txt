@@ -1,0 +1,130 @@
+BusyBox v1.31.1 () multi-call binary.
+ 
+Usage: touch [-c] [-d DATE] [-t DATE] [-r FILE] FILE...
+ 
+Update the last-modified date on the given FILE[s]
+ 
+        -c      Don't create files
+        -h      Don't follow links
+        -d DT   Date/time to use
+        -t DT   Date/time to use
+        -r FILE Use FILE's date/time
+localhost:/home# touch /home/animals/dogs/pluto.txt
+localhost:/home# touch /home/animals/cats/garfield.txt
+localhost:/home# touch /home/animals/fish/nemo.txt
+localhost:/home# cd /temp
+sh: cd: can't cd to /temp: No such file or directory
+localhost:/home# cd /tmp
+localhost:/tmp# ls
+localhost:/tmp# tree
+.
+ 
+0 directories, 0 files
+localhost:/tmp# touch /tmp/adam.txt
+localhost:/tmp# cd /home
+localhost:/home# makedir /humans
+sh: makedir: not found
+localhost:/home# mkdir /humans
+localhost:/home# tree
+.
+L-- animals
+    +-- cats
+    ¦   L-- garfield.txt
+    +-- dogs
+    ¦   L-- pluto.txt
+    L-- fish
+        L-- nemo.txt
+ 
+4 directories, 3 files
+localhost:/home# mkdir -p /home/humans
+localhost:/home# tree
+.
++-- animals
+¦   +-- cats
+¦   ¦   L-- garfield.txt
+¦   +-- dogs
+¦   ¦   L-- pluto.txt
+¦   L-- fish
+¦       L-- nemo.txt
+L-- humans
+ 
+5 directories, 3 files
+localhost:/home# touch /tmp/eva.txt
+localhost:/home# cd /opt
+localhost:/opt# mkdir /opt/eve
+localhost:/opt# cd /tmp
+localhost:/tmp# tree
+.
++-- adam.txt
+L-- eva.txt
+ 
+0 directories, 2 files
+localhost:/tmp# cp /tmp/adam.txt /home/humans
+localhost:/tmp# cd /humans
+localhost:/humans# tree
+.
+ 
+0 directories, 0 files
+localhost:/humans# ls
+localhost:/humans# tree
+.
+ 
+0 directories, 0 files
+localhost:/humans# cp /tmp/adam.txt /home/humans/adam.txt
+localhost:/humans# ls
+localhost:/humans# tree
+0 directories, 0 files
+localhost:/humans# ls -a
+.   ..
+localhost:/humans# cd home
+sh: cd: can't cd to home: No such file or directory
+localhost:/humans# cd /home
+localhost:/home# ls
+animals  humans
+localhost:/home# /humans
+sh: /humans: Permission denied
+localhost:/home# /home/humans
+sh: /home/humans: Permission denied
+localhost:/home# cd /humans
+localhost:/humans# ls
+localhost:/humans# ls-a
+sh: ls-a: not found
+localhost:/humans# ls -a
+.   ..
+localhost:/humans# list
+sh: list: not found
+localhost:/humans# cd /tmp
+localhost:/tmp# ls
+adam.txt  eva.txt
+localhost:/tmp# mv /tmp/adam.txt /home/humans/adam.txt
+localhost:/tmp#
+localhost:/tmp#
+localhost:/tmp#
+localhost:/tmp# mv /tmp/eva.txt /home/humans/eva.txt
+localhost:/tmp# cd /home/humans/
+localhost:/home/humans# ls
+adam.txt  eva.txt
+localhost:/home/humans# cd home
+sh: cd: can't cd to home: No such file or directory
+localhost:/home/humans# cd /home
+localhost:/home# tree
+.
++-- animals
+¦   +-- cats
+¦   ¦   L-- garfield.txt
+¦   +-- dogs
+¦   ¦   L-- pluto.txt
+¦   L-- fish
+¦       L-- nemo.txt
+L-- humans
+    +-- adam.txt
+    L-- eva.txt
+ 
+5 directories, 5 files
+localhost:/home# > /tmp/history.txt
+localhost:/home# > /tmp/history.txt export_file /tmp/history.txt
+localhost:/home# > /tmp/history.txt export_file /tmp/history.txt
+localhost:/home# > /tmp/history.txt
+localhost:/home# > /tmp/history.txt export_file /tmp/history.txt
+localhost:/home#
+.

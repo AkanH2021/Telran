@@ -1,0 +1,25 @@
+Здравствуйте! Высылаю Вам домашнее задание
+ tel-ran-de / 24-25-morning-basic Issue #31 (Linux Homework 3)
+
+
+touch /tmp/script.sh
+chmod +x /tmp/script.sh
+
+nano /tmp/script.sh     
+
+#!/bin/bash
+NAME=Akan
+for run in {1..10}
+do
+date +%D         
+echo Hello $NAME    
+pwd    //ok
+ps -ef | tail -n +1 | wc -l  /
+ps -ef | tail -n +1 | grep bioset | wc -l   
+ls -la /etc/passwd >> /tmp/test.txt
+awk '{print $1}' /tmp/test.txt
+done
+
+chmod -x /tmp/script.sh
+rm /tmp/test.txt
+

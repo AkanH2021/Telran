@@ -1,0 +1,29 @@
+0 htop
+   
+1 mkdir -p /tmp/user1
+   
+2 cd /tmp/user1
+   
+3 touch test1.txt
+   
+4 date >> test1.txt
+   
+5 cat test1.txt 
+   
+6 df -h >> test1.txt
+   
+7 cat test1.txt
+   
+8 history | tail -5 >> test1.txt
+   
+9 cat /proc/cpuinfo | grep vendor >> /tmp/user1/test1.txt 
+  
+10 vi //tmp/user1/test1.txt 
+  
+11 cat /tmp/user1/test1.txt 
+  
+12 ps -ef | tail -n +1 | wc -l >> test1.txt
+  
+13 cat test1.txt 
+  
+14 history > /tmp/user1/history.txt

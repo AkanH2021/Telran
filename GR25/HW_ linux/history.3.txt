@@ -1,0 +1,124 @@
+dat0 touch  1 2 4
+   
+1 ls
+   
+2 rm 1 2 4 
+   
+3 ls
+   
+4 mkdir /home/animals && touch /home/animals/pluto
+   - creates directory and also the file inside it (by && - additional task in 1 row of commands)
+5 ls -la /
+   gives the list of all files in the root directoy
+6 ls -la / > /tmp/ls
+   receive the details of files in the root directory and write them to file /tmp/ls (it creates the file)
+7 ls /tmp/
+   
+8 cat /tmp/ls 
+   "cat" - show the file content (read the file)
+9 date 
+  -shows the date of the moment it was asked for
+10 date >> /tmp/ls
+  - sign ">" записать файл (полностъю создает новый), 
+          а ">>" - дописать файл (дописъвает в конец документа);
+11 cat /tmp/ls 
+   - show content of the file
+12 date > /tmp/ls
+  
+13 cat /tmp/ls 
+  
+14 echo hello world 
+  - echo is simple "print"; "cat"-въводит содержимое файла, а 
+"'echo" - просто печатает то что зададим.
+15 echo /tmp/ls
+  
+16 history 
+  
+17 history > /tmp/history.txt 
+  
+18 history | head -5 
+ показъвает первъе 5 строк из history
+ 
+19 history | head 
+  
+20 history | tail -5
+  показъвает последние5 строк из history
+21 cat /etc/group
+  
+22 cat /etc/group | head 
+  показъвает первъе 10 строк файла
+23 cat /etc/group | tail 
+  показъвает последние 10 строк файла
+24 cat /etc/group | wc -l 
+ считает количество строк е etc/group
+25 cat /etc/group | wc 
+  количество срок, слов, символов
+26 cat /etc/group | tail -5 
+ показъвает 5 строчек с конца 
+27 cat /etc/group | tail -5 | head -2 
+  показъвает 5 строчек с 
+конца и от полученого резулътата 2 с начала
+28 cat /etc/group | grep 
+  поиск
+29 cat /etc/group | grep daemon | wc -l
+  поиск и подсчитай кол-во строк
+30 cat /etc/group | grep daemon | wc -l > /tmp/ls 
+запиши резулътат поиска и подсчета 
+в файл "/temp/ls"
+31 cat /tmp/ls 
+ 
+32 tail -f /var/log/log.txt  | grep ERROR | wc -l 
+сколъко строчек со словом error  
+33 ls /var/log
+  
+34 cat /etc/group | tail -5  >> /tmp/group.txt 
+  
+35 df -h 
+  - состояние диск (насколъко он занят)
+36 df 
+  
+37 df -h | grep /
+  
+38 df -h | grep -w /
+  
+39 df -h | grep -w / | awk '{print $5}'
+  
+40 df -h | grep -w / | awk '{print $5}' | sed 's/%//g'
+  
+41 df -h | grep -w / | awk "{print $5}"
+  
+42 df -h | grep -w / | awk '{print $5}' | sed 's/%/aaa/g'
+  
+43 df -h | grep -w / | awk '{print $5}' | sed 's/%//g'
+  
+44 cat /etc/group | grep -v daemon 
+  
+45 cat /etc/group | grep -v daemon  | wc -l 
+  
+46 cat /etc/group | grep daemon 
+  
+47 cat /etc/group | wc -l 
+  
+48 wc -l < cat /etc/group
+  
+49 wc -l < /etc/group
+  
+50 export VAR=hello
+  
+51 export var=hello
+  
+52 export var=world
+  
+53 env
+  54 echo $VAR $var
+  
+55 export var=hello Andrew
+  
+56 echo $VAR $var
+  
+57 export VAR="world !!!"
+  
+58 echo $VAR
+  59 ls
+  60 echo $PATH
+  61 history > /tmp/history.txt

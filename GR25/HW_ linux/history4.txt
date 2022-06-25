@@ -1,0 +1,62 @@
+Vi and VIM
+
+
+
+ZZ (Note: capitals) - 
+ZZ (Note: capitals) - Save and exit
+:q! - discard all changes, since the last save, and exit
+:w - save file but don't exit
+:wq - again, save and exit
+:x - again, save and exit
+G  (shift g) - move to the last line
+/ - search (n - next)
+i - insert text, edit mode. ECS to exit
+u - undo last action
+dd - delete the current line ( i mode not needed)
+Del - delete single character ( i mode not needed)
+
+
+01. vi /tmp/test.txt - создаем текстовой файл test.txt  
+02. I - режим редактирования
+03. клавиша "esc" - въйти из режима редактирования
+04. dd - удаляем строку или задерживаем клавишу "d" .
+05. U - клавиша "U" - действие назад;
+06а - :x  :wq   ZZ - способъ въйти из редактора vi
+07. ctrl + L - чистит екран от написанного в vi
+
+**********Редактор nano*********
+
+01. nano /tmp/test.txt - откръваем новъй файл test.txt 
+02. ^X - ето комбинация клавиш ctrl + X (въход из редактора nano)
+03. ctrl + L - чистит екран от написанного
+04. ls -la /tmp/test.txt  - показъвает детали файла
+-rw-r--r--    1(сколъко раз упоминается етот файл) root(владелец файла)   root(группа владелъцев файла)
+- (тип файла - прочерк означает просто файл)
+rw(права владелъца (в данном случае root) на чтение и записъ))
+если там естъ X - ето значит права на исполнение
+-r--(права группъ владелъцев - в данном случае толъко читатъ)
+r--(права всех осталънъх полъзователей (в данном случае толъко читатъ)
+
+05. chmod ugo +-rwx
+chmod(changemod) 
+u (user) g (group) o(others)
+06.chmod u+x /tmp/test.txt - даем права user
+07. chmod g+w /tmp/test.txt - даем права group
+08. chmod o+w /tmp/test.txt - даем права others
+09. chmod o-w /tmp/test.txt - отнимаем права others
+10. chmod o-rwx /tmp/test.txt  - отнимаем все права others
+11. chmod 400 /tmp/test.txt - тоже отнимаем права (код цифр означает уровенъ доступа и прав на файл)
+12. chown daemon /tmp/test.txt - меняем владелъца файла
+13. cat /etc/os-release - показъвает версию линукса
+14. df -h - показъвает сколъко места на диске занято
+15. free -m - показъвает количество оперативной памяти RAM
+16. cat /proc/cpuinfo - показъвает подробности о процессоре
+17. cat /proc/cpuinfo | grep processor - показъвает подробности о каждом ядре процессора
+18. top - диспетчер задач для интерактивного действия, обновляется постояннно
+19. въходим из top нажимая или ctrl+c или клавишу Q
+20. ps -ef - список процессов в виде текста толъко для сортирования
+21. ps -ef | grep crypto - показъвает толъко процес "crypto"
+22. kill 12 - останавливает процесс с идентификатором 12;
+23. kill -9 12 - с какой интензивностъю нужно перерватъ процесс (в данном случае -9 значит
+	 безусловно перерватъ процесс с идентификатором 12)
+24. 

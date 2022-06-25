@@ -1,0 +1,23 @@
+/*
+    arr[][]                                 1 2 4 5
+                                            1 5 2 1
+    arr[] { a[], a[], a[]  }
+    arr[0] = {23,3,5,9}
+    for (int j = 0; j<arr.length; j++)
+    for (int j=0; j<arr[j].length; i++ {
+    sum = sum+arr[j][i]
+    }
+ */
+
+
+Class Network
+Component1 = new Hardware();
+
+        Component1.type = "Network card";
+        Component1.interface = "Wireless";
+        Component1.standard = a+c;
+
+ Component2 = new Hardware();
+       Component2.type = "Network card";
+       Component2.interface = "Ethernet";
+       Component2.standard = 100Mb + 1GB ;

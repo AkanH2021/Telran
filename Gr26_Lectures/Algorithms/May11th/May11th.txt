@@ -1,0 +1,3 @@
+https://www.programiz.com/dsa/bubble-sort
+https://informatics.msk.ru/mod/resource/view.php?id=784&forceview=1
+https://www.geeksforgeeks.org/bubble-sort/
