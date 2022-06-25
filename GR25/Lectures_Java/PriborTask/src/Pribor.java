@@ -1,3 +1,5 @@
+package com.company;
+
 public class Pribor {
 
     public static void main(String[] args) {
@@ -7,7 +9,6 @@ public class Pribor {
         System.out.println("Temperature 1 is " + temp1);
         System.out.println("Temperature 2 is " + temp2);
         System.out.println("The temperatures are correct - " + check(temp1, temp2));
-
 
     }
 
@@ -20,15 +21,12 @@ public class Pribor {
         }
     }
 
-
-
     public static int getTemperature1 () {
             return 180;
         }
         public static int getTemperature2 () {
             return 180;
         }
-
 }
 
 

@@ -8,6 +8,7 @@ public class Main {
     int[] arr = getNewRandomArray(20, -100, 100);
         printArr(arr);
         // int[] arr1 = getNewRandomArray2;
+
     }
 
     public static int[] getNewRandomArray(int size, int min, int max) {

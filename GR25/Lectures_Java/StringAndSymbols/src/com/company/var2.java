@@ -13,12 +13,10 @@ public class var2 {
 3) если слово подходит -> формируем результат
 
  */
-
      public static void main(String[] args) {
             String str = "I always doo my homework hihi";
             System.out.println(makeNewString(str));
         }
-
 
         public static String makeNewString(String str){
             StringBuilder res = new StringBuilder();
@@ -33,11 +31,8 @@ public class var2 {
                     }
                     word = new StringBuilder();
                 }
-
             }
-
             return res.toString();
         }
-
     }
 

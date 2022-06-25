@@ -1,12 +1,7 @@
 package com.company;
 
 public class LessonCode {
-
-
-
-
-
-    public static void main(String[] args) {
+   public static void main(String[] args) {
         System.out.println(14%4);
         String s1="hello";
         String s2="hello";
@@ -28,15 +23,12 @@ public class LessonCode {
         }
         return false;
     }
-
-
     public static boolean check2(int temperature1, int temperature2){
         if (temperature1 > 100 ^ temperature2 > 100) {
             return true;
         }
         return false;
     }
-
     public static boolean check3(int temperature1, int temperature2){
         boolean condition= (temperature1 > 100 && temperature2 < 100) ||
                 (temperature2 > 100 && temperature1 < 100);
@@ -52,15 +44,12 @@ public class LessonCode {
                 (temperature2 > 100 && temperature1 < 100);
     }
 
-
-
     public static int getTemperature1(){
         return 0;
     }
     public static int getTemperature2(){
         return 120;
     }
-
 
 }
 

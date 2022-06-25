@@ -8,7 +8,6 @@ public class Main {
         System.out.println(makeNewString("I always do my homework"));
     }
 
-
     public static String makeSubString(String str, int indexStart, int indexEnd) {
         if (indexStart < 0 || indexStart >= str.length() || indexEnd < 0 || indexEnd >= str.length())
             return "OutOfBoundException!";
@@ -19,7 +18,6 @@ public class Main {
 
         StringBuffer st = new StringBuffer("123456"); // то же самое как и обявление int или String: int i; String str1; и т.д.
         String str1 = new String("123456");  // так же можно создаватъ новый стринг
-
 
         for (int i = indexStart; i < indexEnd; i++) {
             // res +=str.charAt(i);
