@@ -1,4 +1,4 @@
-public class SwithCase2 {
+public class SwitchCase2 {
 
 
     public static void main(String[] args) {

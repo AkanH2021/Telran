@@ -1,4 +1,4 @@
-public class SwithCase {
+public class SwitchCase {
 
     public static void main(String[] args) {
         int cod = doSomething();
