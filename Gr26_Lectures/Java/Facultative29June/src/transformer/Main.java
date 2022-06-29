@@ -25,14 +25,14 @@ public class Main {
 
     public static String transformer(String string1, WordsTransformer trans1) {
 
-        String[] words = string1.split(" "); // split unterteilt den String anhand der darauf folgenden Angabe
+        String[] words = string1.split(" "); // split разбивает строку на основе того, что следует после символа
 
         for (int i = 0; i < words.length; i++) {
             if (trans1.check(words[i])) {
                 words[i] = trans1.transform(words[i]);
             }
         }
-        return String.join(" ", words);     // join macht hier split wieder rückgängig
+        return String.join(" ", words);     // join соединяет (обратно методу split)
     }
 
 }
