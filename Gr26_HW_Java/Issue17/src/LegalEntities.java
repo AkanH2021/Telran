@@ -6,7 +6,7 @@ public class LegalEntities extends Customer {
 
     @Override
     public double percentageAdding() {
-        if (getAccount().getBalance() > 10000) {
+        if (getAccount().getBalance() >= 10000) {
             return super.percentageAdding();
         } else {
             return super.getAccount().getBalance();
