@@ -5,12 +5,12 @@ public class Main {
     public static void main(String[] args) {
 /* Let's say you are writing a banking program. You have clients: legal entities, individuals, VIP clients.
 Each client has an Account{String iban, double balance}. The terms of business put the condition that for each
-  account percents are added and after this customers are informed about the balance. To individuals' accounts
-   base percentage is added. Percentage is added on the accounts of legal entities, but with condition that the balance
-    account has balance of at least 10,000. VIP client's accounts receive base percentage plus bonus. Informing is
-     also done differently: legal entities and individuals receive an extract by letter, VIP clients receive by letter
-     and email. You need to develop a class system, implement the accrual and informing methods.
-    Of course, the program should be able to process clients/accounts as a list. */
+account percents are added and after this customers are informed about the balance. To individuals' accounts
+base percentage is added. Percentage is added on the accounts of legal entities, but with condition that the balance
+account has balance of at least 10,000. VIP client's accounts receive base percentage plus bonus. Informing is
+also done differently: legal entities and individuals receive an extract by letter, VIP clients receive by letter
+and email. You need to develop a class system, implement the accrual and informing methods.
+ Of course, the program should be able to process clients/accounts as a list. */
 
         Account acc1 = new Account("DE123456", 2000.00);
         Account acc2 = new Account("DE234567", 12000.00);
@@ -51,6 +51,5 @@ Each client has an Account{String iban, double balance}. The terms of business p
         System.out.println("-----");
         Customer.printInfo(vipList);
         System.out.println("-----");
-
     }
 }
