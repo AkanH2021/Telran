@@ -13,12 +13,8 @@ public class LegalEntities extends Customer {
         }
     }
 
-    public String informing() {
-        return super.informing();
-    }
-
     @Override
     public String toString() {
-        return " Type: LegalEntities," + " account= " + getAccount();
+        return " Type: LegalEntities," + " account= " + super.getAccount();
     }
 }

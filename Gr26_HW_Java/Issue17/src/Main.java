@@ -44,7 +44,14 @@ and email. You need to develop a class system, implement the accrual and informi
         vipList.add(vip1);
         vipList.add(vip2);
         vipList.add(vip3);
+        List<Customer> allCustomers = new ArrayList<>();
+        allCustomers.addAll(individualsList);
+        allCustomers.addAll(legalEntitiesList);
+        allCustomers.addAll(vipList);
 
+        System.out.println("Complete list of customers");
+        Customer.printInfo(allCustomers);
+        System.out.println("------------Separate lists of customers:----------");
         Customer.printInfo(individualsList);
         System.out.println("-----");
         Customer.printInfo(legalEntitiesList);
