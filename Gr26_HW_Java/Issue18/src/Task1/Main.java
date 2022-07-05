@@ -34,5 +34,18 @@ public class Main {
         }
         return stringSet;
     }
+
+    public static List<String> task1a(List<String> stringList) { //from teacher
+        List<String> newStrList = new ArrayList<>();
+        if (stringList==null || stringList.isEmpty()) return newStrList;
+        LinkedHashSet<String> stringHashSet = new LinkedHashSet<>();
+        int count = 0;
+        for (String s : stringList) {
+            if (s != null && s.trim().split(" ").length>=2)
+                stringHashSet.add(s);
+        }
+        newStrList.addAll(stringHashSet);
+        return newStrList;
+    }
 }
 
