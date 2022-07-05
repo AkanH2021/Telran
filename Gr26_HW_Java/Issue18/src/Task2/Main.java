@@ -49,13 +49,19 @@ public class Main {
         System.out.println(task2(group));
     }
 
-    public static TreeSet<Student> task2(List<Group> groupList) {
+    public static List<Student> task2(List<Group> groupList) {
         Comparator<Student> comp = new StudentsTaskDoneComparator();
         TreeSet<Student> stSet = new TreeSet<>(comp);
+
         for (Group gr : groupList) {
             stSet.addAll(gr.getStList());
         }
-        return stSet;
+        List<Student> res = new ArrayList<>();
+        if (stSet.size()<=3) return new ArrayList<>(stSet);
+        for (int i = 0; i < 3; i++) {
+            res.add(stSet.pollFirst());
+        }
+        return res;
     }
 }
 
