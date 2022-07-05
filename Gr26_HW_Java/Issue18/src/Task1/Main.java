@@ -21,10 +21,10 @@ public class Main {
         stringList.add(st5);
         stringList.add(st6);
 
-        System.out.println(twoWorldsAndMore(stringList));
+        System.out.println(task1(stringList));
     }
 
-    public static HashSet<String> twoWorldsAndMore(List<String> list) {
+    public static HashSet<String> task1(List<String> list) {
         HashSet<String> stringSet = new HashSet<>();
         for (String str : list) {
             String[] q = str.split(" ");
