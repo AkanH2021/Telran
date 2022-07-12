@@ -34,8 +34,8 @@ public class Main {
         System.out.println(task3(books));
     }
 
-    public static Map<String, List<String>> task3 (List<Book> list) {
-        Map<String, List<String>> result = new HashMap<>();
+    public static Map<List<Author>, List<String>> task3 (List<Book> list) {
+        Map<List<Author>, List<String>> result = new HashMap<>();
         if (list!=null && !list.isEmpty()) {
             for (Book book : list) {
                 List<String> value = result.get(book.getAuthors());

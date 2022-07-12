@@ -17,8 +17,8 @@ public class Book {
         return title;
     }
 
-    public String getAuthors() {
-        return authors.toString();
+    public List<Author> getAuthors() {
+        return authors;
     }
 
     public String getISBN() {
@@ -27,6 +27,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Author: " + getAuthors() + " title: " + getTitle() + ", ISBN= " + getISBN() + System.lineSeparator();
+        return title + ", authors=" + authors + ISBN + System.lineSeparator();
     }
+
 }
