@@ -25,7 +25,7 @@ public class Main {
                     if ((array[i].length >= 10) && (array[j].length >= 10))
                         throw new IllegalArgumentException();
                 } catch (NullPointerException ex1) {
-                    System.out.println("Array income as null");
+                    System.out.println("Incoming array as null");
                 } catch (Exception ex2) {
                     System.out.println("Array lenght is not correct");
                 }
