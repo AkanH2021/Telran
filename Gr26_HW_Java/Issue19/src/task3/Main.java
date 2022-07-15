@@ -33,6 +33,12 @@ public class Main {
 
         System.out.println(books);
         System.out.println(task3(books));
+
+        Map<Author, List<Book>> map = task3(books);
+        for (Map.Entry e : map.entrySet()) {
+            System.out.println(e.getKey() + " " + e.getValue());
+        }
+
     }
 
     public static Map<Author, List<Book>> task3(List<Book> list) {
@@ -40,14 +46,20 @@ public class Main {
         if (list != null && !list.isEmpty()) {
             for (Book book : list) {   //бежим по списку книг, берем каждого автора,
                 List<Author> authors = book.getAuthors();  // создаем список авторов, взяв каждого автора из цикла
-                if (authors != null)  //если автор естъ
+                if (authors != null) { //если автор естъ
                     for (Author author : authors) {  //бежим по списку авторов
                         List<Book> books = res.getOrDefault(author, new ArrayList<>());  //делаем список из книг каждого автора отделъно
-                       //getOrDefault - если значение естъ, то добавляет его, если нет значения, делает новое поле
+                        //getOrDefault - если значение естъ, то добавляет его, если нет значения, делает новое поле
                         books.add(book);
                         res.put(author, books);
                     }
+                } else {
+                    List<Book> books = res.getOrDefault(null, new ArrayList<>());
+                    books.add(book);
+                    res.put(null, books);
+                }
             }
-        }return res;
+        }
+        return res;
     }
 }
