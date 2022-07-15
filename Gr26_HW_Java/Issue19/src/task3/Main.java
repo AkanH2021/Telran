@@ -24,28 +24,30 @@ public class Main {
         singleAuthor2.add(a2);
 
         List<Book> books = new ArrayList<>();
-        books.add(new Book("book1", allAuthors, "0-553-35448-5"));          // Authors: a1 & a2
-        books.add(new Book("book2", allAuthors, "0-553-56548-6"));          // Authors: a1 & a2
-        books.add(new Book("book3", singleAuthor1, "1-612-03103-X"));       // Author:  a1
-        books.add(new Book("book4", singleAuthor1, "0-451-02223-8"));       // Author:  a1
-        books.add(new Book("book5", singleAuthor2, "0-671-69874-5"));       // Author:  a2
-        books.add(new Book("book6", singleAuthor2, "0-441-37469-7"));       // Author:  a2
+        books.add(new Book("book1", "0-553-35448-5", allAuthors));          // Authors: a1 & a2
+        books.add(new Book("book2", "0-553-56548-6", allAuthors));          // Authors: a1 & a2
+        books.add(new Book("book3", "1-612-03103-X", singleAuthor1));       // Author:  a1
+        books.add(new Book("book4", "0-451-02223-8", singleAuthor1));       // Author:  a1
+        books.add(new Book("book5", "0-671-69874-5", singleAuthor2));       // Author:  a2
+        books.add(new Book("book6", "0-441-37469-7", singleAuthor2));       // Author:  a2
 
+        System.out.println(books);
         System.out.println(task3(books));
     }
 
-    public static Map<List<Author>, List<String>> task3 (List<Book> list) {
-        Map<List<Author>, List<String>> result = new HashMap<>();
-        if (list!=null && !list.isEmpty()) {
-            for (Book book : list) {
-                List<String> value = result.get(book.getAuthors());
-                if (value==null) {
-                    value = new ArrayList<>();
-                }
-                value.add(book.getTitle());
-                result.put(book.getAuthors(), value);
+    public static Map<Author, List<Book>> task3(List<Book> list) {
+        Map<Author, List<Book>> res = new HashMap<>();
+        if (list != null && !list.isEmpty()) {
+            for (Book book : list) {   //бежим по списку книг, берем каждого автора,
+                List<Author> authors = book.getAuthors();  // создаем список авторов, взяв каждого автора из цикла
+                if (authors != null)  //если автор естъ
+                    for (Author author : authors) {  //бежим по списку авторов
+                        List<Book> books = res.getOrDefault(author, new ArrayList<>());  //делаем список из книг каждого автора отделъно
+                       //getOrDefault - если значение естъ, то добавляет его, если нет значения, делает новое поле
+                        books.add(book);
+                        res.put(author, books);
+                    }
             }
-        }
-        return result;
+        }return res;
     }
 }

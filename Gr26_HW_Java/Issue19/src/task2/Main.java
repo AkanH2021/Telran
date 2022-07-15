@@ -21,9 +21,10 @@ public class Main {
         bookList.add(book5);
 
         System.out.println(task2a(bookList));
+        System.out.println(task2b(bookList));
     }
 
-    public static Map<String, List<String>> task2a(List<Book> bookList) { //from Alena
+    public static Map<String, List<String>> task2a(List<Book> bookList) { //method 1
         Map<String, List<String>> res = new HashMap<>();
         List<String> titleList = new ArrayList<>();
         if (bookList.isEmpty() || bookList.contains(null)) return res;
@@ -38,4 +39,22 @@ public class Main {
         }
         return res;
     }
+
+    public static Map<String, List<String>> task2b (List<Book> list) { //method 2
+        Map<String, List<String>> result = new HashMap<>();
+        if (list!=null && !list.isEmpty()) {
+            for (Book book : list) {
+                List<String> value = result.get(book.getAuthor());
+                if (value==null) {
+                    value = new ArrayList<>();
+                }
+                value.add(book.getTitle(list));
+                result.put(book.getAuthor(), value);
+            }
+        }
+        return result;
+    }
+
+
+
 }

@@ -7,7 +7,7 @@ public class Book {
     private List<Author> authors;
     private String ISBN;
 
-    public Book(String title, List<Author> authors, String ISBN) {
+    public Book(String title, String ISBN, List<Author> authors) {
         this.title = title;
         this.authors = authors;
         this.ISBN = ISBN;
