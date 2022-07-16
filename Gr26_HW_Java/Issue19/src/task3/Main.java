@@ -38,7 +38,6 @@ public class Main {
         for (Map.Entry e : map.entrySet()) {
             System.out.println(e.getKey() + " " + e.getValue());
         }
-
     }
 
     public static Map<Author, List<Book>> task3(List<Book> list) {
