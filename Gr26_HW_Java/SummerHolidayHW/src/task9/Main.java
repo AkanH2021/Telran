@@ -5,10 +5,7 @@ public class Main {
     //2 –> (()) , ()()
     //3 -> ((())), (()()), (())(), ()(()), ()()()
     public static void main(String[] args) {
-
     }
 
-    public static void task9(char ch1, char ch2, int n) {
 
-    }
 }
