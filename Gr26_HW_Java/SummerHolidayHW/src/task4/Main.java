@@ -42,8 +42,8 @@ public class Main {
         if ((str1 == null) || (str2 == null)) {
             throw new RuntimeException("one or both strings are null");
         }
-        String newStr1 = str1.toUpperCase();
-        String newStr2 = str2.toUpperCase();
+        String newStr1 = str1.toLowerCase();
+        String newStr2 = str2.toLowerCase();
 
         for (int i = 0; i < newStr1.length(); i++) {
             map1.put(newStr1.charAt(i), str1);  //String as value: just to keep the original String str1
