@@ -56,12 +56,7 @@ public class ValuesControl {
 
     public boolean isLeapYear(int year) {
         boolean flag;
-        if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) {
-            flag = true;
-        } else {
-            System.out.println("The year is not leap");
-            flag = false;
-        }
+        flag = year % 4 == 0 && (year % 100 != 0 || year % 400 == 0);
         return flag;
     }
 

@@ -3,7 +3,8 @@ package task7;
 import java.util.*;
 
 public class Main {
-    //7. Есть два списка с буквами. Определить, является ли один список циклической версией другого. Например, для списков {a, b, c, d} и {c, d, a, b} результат будет true,
+    //7. Есть два списка с буквами. Определить, является ли один список циклической версией другого.
+    // Например, для списков {a, b, c, d} и {c, d, a, b} результат будет true,
     //а для {d, e, f} и {d, f, e} - false.
     public static void main(String[] args) {
         List<String> list1 = new ArrayList<>();
@@ -34,7 +35,7 @@ public class Main {
             System.out.println("Lists are not cycle version of each other");
         }
 
-        newList = new ArrayList<>(list2);  // -> {a,b,c,d} //copy values of list 2 into new array
+        newList = new ArrayList<>(list2);  // -> {c, d, a, b} //copy values of list 2 into new array
         newList.addAll(list2); //-> {c, d, a, b, c, d, a, b}  //doubling the values into new array
 
         for (int i = 0; i < list1.size(); i++) {
@@ -54,10 +55,3 @@ public class Main {
     }
 }
 
-/*   if (list1.equals(toCheck)) {
-                cycling = true;
-            } else {
-                cycling = false;
-            }
-            return cycling;
-            }   */
