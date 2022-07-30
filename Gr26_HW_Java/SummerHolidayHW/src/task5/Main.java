@@ -2,7 +2,7 @@ package task5;
 
 import java.util.*;
 
-public class Main_halfReady {
+public class Main {
     public static void main(String[] args) {
         //5.      Дана  map <Character, Integer>. Необходимо сформировать случайную строку, где соответствующая буква будет встречаться заданное количество  раз.
         //{A->2, b->1, k->2, c->3, ‘ ‘->2 } -> “ck cca k”
