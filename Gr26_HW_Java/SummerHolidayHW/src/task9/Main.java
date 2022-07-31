@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Main {
     //9.       * Дано целое число n (0<n<8). Требуется вывести все правильные скобочные последовательности длины 2 n. В задаче используются только круглые скобки.
     //2 –> (()) , ()() -> aabb, abab -> iijj, ijij;
-    //3 -> ((())), (()()), (())(), ()(()), ()()()  -> aaabbb, aababb, aabbab, abaabb, abaabb, ababab  -> iiijjj,iijijj, iijjij, ijiijj, ijiijj, ijijij
+    //3 -> ((())), (()()), (())(), ()(()), ()()()  -> aaabbb, aababb, aabbab, abaabb, ababab  -> iiijjj,iijijj, iijjij, ijiijj, ijijij
     public static void main(String[] args) {
         ArrayList<String> list = parenthesesGenerating(2);
         System.out.println(list);
