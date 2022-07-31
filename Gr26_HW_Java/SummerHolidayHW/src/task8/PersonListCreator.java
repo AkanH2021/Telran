@@ -30,7 +30,7 @@ public class PersonListCreator extends PersonCreator {
     public static void printList(List<Person> people) {
         Collections.sort(people);
         for (Person p : people) {
-            System.out.println("Name: " + p.getName() + " birthday: " + p.getBirthday());
+            System.out.println("Name: " + p.getName() + "; birthday: " + p.getBirthday());
             System.out.println();
         }
     }
