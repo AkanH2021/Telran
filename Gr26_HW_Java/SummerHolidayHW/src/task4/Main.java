@@ -23,6 +23,7 @@ public class Main {
         List<Character> list1 = new ArrayList<>();
         if ((str1 == null) || (str2 == null)) {
             System.out.println("one or both strings are null");
+            return false;
         }
         for (int i = 0; i < str1.length(); i++) {
             list1.add(str1.toUpperCase().charAt(i));
@@ -41,6 +42,7 @@ public class Main {
         Map<Character, String> map2 = new HashMap<>();
         if ((str1 == null) || (str2 == null)) {
             System.out.println("one or both strings are null");
+            return false;
         }
         assert str1 != null;
         String newStr1 = str1.toLowerCase();
