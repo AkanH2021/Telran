@@ -22,7 +22,7 @@ public class Main {
     public static boolean anagramCheck1(String str1, String str2) {  //Method 1
         List<Character> list1 = new ArrayList<>();
         if ((str1 == null) || (str2 == null)) {
-            throw new RuntimeException("one or both strings are null");
+            System.out.println("one or both strings are null");
         }
         for (int i = 0; i < str1.length(); i++) {
             list1.add(str1.toUpperCase().charAt(i));
@@ -40,9 +40,11 @@ public class Main {
         Map<Character, String> map1 = new HashMap<>();
         Map<Character, String> map2 = new HashMap<>();
         if ((str1 == null) || (str2 == null)) {
-            throw new RuntimeException("one or both strings are null");
+            System.out.println("one or both strings are null");
         }
+        assert str1 != null;
         String newStr1 = str1.toLowerCase();
+        assert str2 != null;
         String newStr2 = str2.toLowerCase();
 
         for (int i = 0; i < newStr1.length(); i++) {
