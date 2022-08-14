@@ -39,7 +39,6 @@ public class Task2 {
         floatsList.add(7.456f);
         floatsList.add(4.456f);
         System.out.println(findMax(floatsList));
-
     }
 
     public static <T extends Comparable<T>> T findMax(List<T> list) {
