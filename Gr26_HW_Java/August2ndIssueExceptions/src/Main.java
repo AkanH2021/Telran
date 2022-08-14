@@ -8,7 +8,7 @@ public class Main {
     //5. Поле возраст некорректно;   6. В строке больше полей, чем необходимо;
     public static void main(String[] args) {
         Checkers checkers = new Checkers();
-        User user = new User("John", "Lennon", 40, "lennon@mail.com");
+        User user = new User("John", "Lennon", 140, "lennon@mail.com");
         checkers.userControl(user);
     }
 
