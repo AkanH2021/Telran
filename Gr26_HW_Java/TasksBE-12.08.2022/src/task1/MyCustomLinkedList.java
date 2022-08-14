@@ -77,5 +77,4 @@ public class MyCustomLinkedList<T> {
             node = node.getNext();
         }
     }
-
 }
