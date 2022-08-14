@@ -41,4 +41,5 @@ public class Main {
         strList2.removeByIndex(2);
         strList2.printAllElements();
     }
+
 }
