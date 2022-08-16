@@ -25,6 +25,10 @@ public class Main {
         System.out.println(mapa);
         correction(mapa);
         System.out.println(mapa);
+
+        mapCheckAndCorrect(mapa);
+
+
     }
 
     public static void correction(Map<Character, Set<String>> wrongMap) {
@@ -40,6 +44,32 @@ public class Main {
             if (iterator.next().charAt(0) != ch) {
                 iterator.remove();
             }
+        }
+    }
+
+    public static void mapCheckAndCorrect(Map<Character, Set<String>> map) { //from teacher
+        Set<Character> keys = map.keySet();
+        for (Character key : keys) {
+            Set<String> values = map.get(key);
+            System.out.println(values);
+            Iterator<String> iterator = values.iterator();
+            while (iterator.hasNext()) {
+                String value = iterator.next();
+                if (value.charAt(0) != key) {
+                    addValue(map, value);
+                    iterator.remove();
+                }
+            }
+        }
+    }
+
+    private static void addValue(Map<Character, Set<String>> map, String value) {  //from teacher
+        if (value != null && !value.isEmpty()) {
+            Character key = value.charAt(0);
+            Set<String> set = map.getOrDefault(key, new HashSet<>());
+            set.add(value);
+            map.put(key, set);
+
         }
     }
 }
