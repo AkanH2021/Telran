@@ -3,12 +3,15 @@ package task9;
 import java.util.ArrayList;
 
 public class Main {
-    //9.       * Дано целое число n (0<n<8). Требуется вывести все правильные скобочные последовательности длины 2 n. В задаче используются только круглые скобки.
+    //9.       * Дано целое число n (0<n<8). Требуется вывести все правильные скобочные последовательности длины 2 n.
+    // В задаче используются только круглые скобки.
     //2 –> (()) , ()() -> aabb, abab -> iijj, ijij;
-    //3 -> ((())), (()()), (())(), ()(()), ()()()  -> aaabbb, aababb, aabbab, abaabb, ababab  -> iiijjj,iijijj, iijjij, ijiijj, ijijij
+    //3 -> ((())), (()()), (())(), ()(()), ()()()  ->
     public static void main(String[] args) {
         ArrayList<String> list = parenthesesGenerating(2);
         System.out.println(list);
+
+        var2Task9(3);
     }
 
     public static void task9(ArrayList<String> strList, int left, int right, char[] str, int index) {
@@ -31,4 +34,12 @@ public class Main {
         task9(list, count, count, str, 0);
         return list;
     }
+
+    public static void var2Task9(int pow) {  //from teacher
+        for (int i = 2*pow; i < 2*pow*2; i=i+2) {
+            System.out.println(Integer.toBinaryString(i));
+        }
+    }
+
+
 }
