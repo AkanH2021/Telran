@@ -17,7 +17,6 @@ public class Main {
         list2.add("d");
         list2.add("a");
         list2.add("b");
-
         System.out.println(isCycle(list1, list2));
     }
 
