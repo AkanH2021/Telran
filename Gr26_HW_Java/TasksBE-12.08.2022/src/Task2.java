@@ -48,6 +48,8 @@ public class Task2 {
         stringsList.add("Yura");
         System.out.println(findMax(stringsList));
 
+        System.out.println(max(stringsList));
+
     }
 
     public static <T extends Comparable<T>> T findMax(List<T> list) {
@@ -57,6 +59,16 @@ public class Task2 {
                 maxVal = val;
         }
         return maxVal;
+    }
+
+    public static <T extends Comparable<T>> T max(List<T> list) {  //from teacher
+        T max = null;
+        for (T s : list) {
+            if ((max == null) || s.compareTo(max) > 0) {
+                max = s;
+            }
+        }
+        return max;
     }
 
 }
