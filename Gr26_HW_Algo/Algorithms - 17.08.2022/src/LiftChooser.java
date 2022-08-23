@@ -26,7 +26,7 @@ public class LiftChooser {
         return currentCall;
     }
 
-    public void randomFloor() {
+    public void liftCaller() {
         int low = setLowestFloor();
         int high = setHighestFloor();
         int call = setCurrentCall();

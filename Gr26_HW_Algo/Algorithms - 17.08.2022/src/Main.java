@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         LiftChooser liftChooser = new LiftChooser();
 
-        liftChooser.randomFloor();
+        liftChooser.liftCaller();
     }
 
 }
