@@ -4,8 +4,9 @@ public class Main {
        примеру классов BankAccount и Card c урока)*/
     public static void main(String[] args) {
 
-        Person.Passport passport11 = new Person("Ivan", "Ivanov", 1900).new Passport(20394, "DE");
+        Person.Passport passport11 = new Person("Ivan", "Ivanov", 1978).new Passport(20394, "DE");
         System.out.println(passport11.checkValidity());
+        System.out.println(passport11);
 
     }
 }

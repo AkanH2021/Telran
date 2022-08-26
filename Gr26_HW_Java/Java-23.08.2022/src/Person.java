@@ -36,7 +36,7 @@ public class Person {
 
         @Override
         public String toString() {
-           return ", passNum=" + passNum + ", country='" + country;
+           return Person.this.name + " " + Person.this.surName + ", passnum "+  passNum + ", country=" + country;
         }
 
         public boolean checkValidity() {
