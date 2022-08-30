@@ -1,3 +1,5 @@
+package task1A;
+
 public class Person {
     String fName;
     String lName;
@@ -35,7 +37,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "task1A.Person{" +
                 "fName='" + fName + '\'' +
                 ", lName='" + lName + '\'' +
                 ", email='" + email + '\'' +

@@ -1,3 +1,5 @@
+package task1A;
+
 public class Address {
     String postcode;
     String city;
@@ -29,7 +31,7 @@ public class Address {
 
     @Override
     public String toString() {
-        return "Address{" +
+        return "task1A.Address{" +
                 "postcode='" + postcode + '\'' +
                 ", city='" + city + '\'' +
                 ", street='" + street + '\'' +
