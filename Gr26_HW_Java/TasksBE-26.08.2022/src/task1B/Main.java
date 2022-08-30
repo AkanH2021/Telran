@@ -7,7 +7,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-
+    /*  В программе задан список task1A.Person{ String fName, String lName, String email, String phone, task1A.Address address}.
+    task1A.Address{String postcode, String city, String street, String house}
+      Реализовать следующие функции:
+            -получить список всех ФИО
+            -получить список всех e-mail
+            -получить список всех телефонов
+            -получить список всех адресов в виде строки адреса
+    Естественно, все вышеперечисленные функции может и должен реализовать один метод, в который в качестве параметра
+    должен приходить список task1A.Person и реализация необходимого способа обработки. Ограничения: не использовать
+    стандартные Java интерфейсы, все необходимые классы и интерфейсы описывать и реализовывать самостоятельно. Не использовать stream.  */
     public static void main(String[] args) {
 
         Person p1 = new Person("Ivan", "Ivanov", "ivan@ivanov.com", "0123456", new Address("0123", "Berlin", "Volkstr", "1"));
