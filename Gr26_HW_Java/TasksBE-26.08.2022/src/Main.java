@@ -84,6 +84,68 @@ public class Main {
 
         System.out.println("****************");
 
+        Function1 getPersonNamesList = new Function1() {
+            @Override
+            public List<String> apply(List<Person> list) {
+                List<String> namesList = new ArrayList<>();
+                for (Person p : list) {
+                    namesList.add(p.getfName());
+                }
+                return namesList;
+            }
+        };
+        System.out.println(task1(personList, getPersonNamesList));
+
+        Function1 getPersonSurnamesList = new Function1() {
+            @Override
+            public List<String> apply(List<Person> list) {
+                List<String> surNamesList = new ArrayList<>();
+                for (Person p : list) {
+                    surNamesList.add(p.getlName());
+                }
+                return surNamesList;
+            }
+        };
+        System.out.println(task1(personList, getPersonSurnamesList));
+
+        Function1 getPersonEmailsList = new Function1() {
+            @Override
+            public List<String> apply(List<Person> list) {
+                List<String> emailsList = new ArrayList<>();
+                for (Person p : list) {
+                    emailsList.add(p.getEmail());
+                }
+                return emailsList;
+            }
+        };
+        System.out.println(task1(personList, getPersonEmailsList));
+
+        Function1 getPersonPhoneList = new Function1() {
+            @Override
+            public List<String> apply(List<Person> list) {
+                List<String> phonesList = new ArrayList<>();
+                for (Person p : list) {
+                    phonesList.add(p.getPhone());
+                }
+                return phonesList;
+            }
+        };
+        System.out.println(task1(personList, getPersonPhoneList));
+
+        Function1 getPersonAddressList = new Function1() {
+            @Override
+            public List<String> apply(List<Person> list) {
+                List<String> addressList = new ArrayList<>();
+                for (Person p : list) {
+                    addressList.add(String.valueOf(p.getAddress()));
+                }
+                return addressList;
+            }
+        };
+        System.out.println(task1(personList, getPersonAddressList));
+
+        System.out.println("****************");
+
         Task1b task1 = new Task1b() {
             @Override
             public List<Person> persons() {
@@ -95,6 +157,12 @@ public class Main {
         System.out.println(task1.persons());
 
     }
+
+    public static List<String> task1(List<Person> list, Function1 function1) {
+        return function1.apply(list);
+    }
+
+
 }
 
 interface Task1a {
@@ -104,6 +172,12 @@ interface Task1a {
 interface Task1b {
     List<Person> persons();
 }
+
+interface Function1 {
+    List<String> apply (List<Person> list);
+}
+
+
 
 //    interface Task2 {
 //        <T> List<T> takeFromOtherList(List<T> list); //not ready
