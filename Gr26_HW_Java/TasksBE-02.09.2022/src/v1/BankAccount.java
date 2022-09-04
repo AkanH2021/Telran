@@ -1,3 +1,5 @@
+package v1;
+
 public class BankAccount {
     private Person person;
     private String IBAN;
