@@ -30,10 +30,13 @@ public class Main {
         BankAccount ba3b = new BankAccount(p2, "DE1912345678909845", 90000);
         BankAccount ba4b = new BankAccount(p2, "DE1912345678909846", 85000);
 
+        System.out.println("-----Task1------");
         Stream.of(ba1a, ba2a, ba3a, ba4a)   //task1
                 .filter(s -> s != null && s.getBalance() < 100)
                 .forEach(s -> System.out.println(s));
 
+
+        System.out.println("-----Task2------");
         List<BankAccount> bankAccounts = List.of(ba1b, ba2b, ba3b, ba4b);   //task2
         List<String> resList = bankAccounts.stream()
                 .filter(s -> s != null && s.getBalance() >= 100000)
