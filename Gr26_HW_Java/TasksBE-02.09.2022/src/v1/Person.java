@@ -1,9 +1,9 @@
 package v1;
 
 public class Person {
-    private String fName;
-    private String lName;
-    private String email;
+    private final String fName;
+    private final String lName;
+    private final String email;
 
     public Person(String fName, String lName, String email) {
         this.fName = fName;
