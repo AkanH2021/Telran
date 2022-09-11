@@ -1,5 +1,6 @@
 package hw8thSeptember;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -34,10 +35,10 @@ public class Issue3 {
     public static List<String> task3HW(List<Programmer> plist) {
         List<String> resList = plist.stream()
                 .filter(s -> s != null)
+                .sorted(Comparator.comparing(s->s.getName()))
                 .flatMap(coder -> (coder.getTasks().stream()
                         .map(task -> coder.getName() + ": task N: " + task.getNumber() +
                                 " days: " + task.getDaysInProcessing() + '\n')))
-                .distinct()
                 .collect(Collectors.toList());
         return resList;
     }
