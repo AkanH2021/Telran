@@ -32,13 +32,14 @@ public class Task3 {
     }
 
     public static List<String> task3HW(List<Programmer> plist) {
-        return plist.stream()
+        List<String> resList = plist.stream()
                 .filter(s -> s != null)
                 .flatMap(coder -> (coder.getTasks().stream()
                         .map(task -> coder.getName() + ": task N: " + task.getNumber() +
                                 " days: " + task.getDaysInProcessing() + '\n')))
                 .distinct()
                 .collect(Collectors.toList());
+        return resList;
     }
 
 }

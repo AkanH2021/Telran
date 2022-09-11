@@ -33,13 +33,14 @@ public class Task1 {
     }
 
     public static List<Task> task1HW(List<Programmer> plist) {
-        return plist.stream()
+        List<Task> resList = plist.stream()
                 .filter(s -> s != null
                         && s.getCity().equalsIgnoreCase("Berlin"))
                 .flatMap(p -> p.getTasks().stream())
                 .filter(s -> !s.getStatus().equalsIgnoreCase("done")
                         && s.getDaysInProcessing() > 5)
                 .collect(Collectors.toList());
+        return resList;
     }
 
 }

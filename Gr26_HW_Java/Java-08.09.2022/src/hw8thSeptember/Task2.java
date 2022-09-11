@@ -37,12 +37,13 @@ public class Task2 {
     }
 
     public static List<Task> task2HW(List<Programmer> plist) {
-        return plist.stream()
+        List<Task> resList = plist.stream()
                 .filter(s -> s != null)
                 .flatMap(p -> p.getTasks().stream())
                 .sorted(Comparator.comparingInt(Task::getDaysInProcessing).reversed())
                 .limit(10)
                 .collect(Collectors.toList());
+        return resList;
     }
 
 }
