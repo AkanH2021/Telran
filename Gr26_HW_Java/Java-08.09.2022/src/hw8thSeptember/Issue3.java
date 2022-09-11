@@ -3,7 +3,7 @@ package hw8thSeptember;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Task3 {
+public class Issue3 {
     /*  3. Дан список Programmer(String name, String city, List<Task>  tasks). Каждый программист  имеет список задач Task
             (int Number, String description, String status, int daysInProcessing) .
             Сформировать лист строк вида «Программист:НомерЗадача:ДнейВOбработке».*/

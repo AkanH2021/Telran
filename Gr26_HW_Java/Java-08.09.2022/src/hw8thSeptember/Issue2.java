@@ -4,7 +4,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Task2 {
+public class Issue2 {
     /*  2. Дан список Programmer(String name, String city, List<Task>  tasks). Каждый программист
     имеет список задач Task (int Number, String description, String status, int daysInProcessing).
               Сформировать лист из десяти задач которые дольше всего находятся в работе.*/

@@ -4,7 +4,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Task4 {
+public class Issue4 {
     /*  4. Дан список строк «Иванов Иван Иванович: 645» Сформировать отсортированный по числовому полю список строк вида:
      «645:Иванов И.И.»,
     при этом отобрать только те строки, где числовое поле больше 500.*/
