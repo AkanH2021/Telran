@@ -32,16 +32,16 @@ public class Issue2 {
 
         List<Programmer> codersList = List.of(p1, p2, p3);
 
-        System.out.println(task2HW(codersList));
+        System.out.println(task2HW(codersList, 10));
 
     }
 
-    public static List<Task> task2HW(List<Programmer> plist) {
+    public static List<Task> task2HW(List<Programmer> plist, int limitNum) {
         List<Task> resList = plist.stream()
                 .filter(s -> s != null)
                 .flatMap(p -> p.getTasks().stream())
                 .sorted(Comparator.comparingInt(Task::getDaysInProcessing).reversed())
-                .limit(10)
+                .limit(limitNum)
                 .collect(Collectors.toList());
         return resList;
     }
