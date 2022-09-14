@@ -16,11 +16,9 @@ public class Task2 {
 
     public static Optional<String> task2(String str, String key) {
         String[] transformed1 = str.split(";");
-        if (key != null) {
-            System.out.println(Arrays.stream(transformed1)
-                    .filter(s -> s != null && s.substring(0, str.indexOf(":")).equalsIgnoreCase(key))
-                    .reduce((i1, i2) -> i2));
-        }
+        System.out.println(Arrays.stream(transformed1)
+                .filter(s -> s != null && s.substring(0, str.indexOf(":")).equalsIgnoreCase(key))
+                .reduce((i1, i2) -> i2));
         return Optional.empty();
     }
 }
