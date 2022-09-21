@@ -1,0 +1,8 @@
+Прочитать чем отличается IntStrem от Stream.
+
+IntStream is a stream of primitive int values.
+It is a sequence of primitive int-value elements and a specialized stream for manipulating int values.
+To provide a way to work with the three most used primitive types – int, long and double – the standard library
+ includes three primitive-specialized implementations: IntStream, LongStream, and DoubleStream.
+
+Stream<Integer> is a stream of Integer objects.
