@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static task3.Main.task3;
 public class TestTask3 {
     @Test
-    public void makeMapOfBest3StudentsfromGroups() {
+    public void shouldMakeMapOfBest3StudentsfromGroupsTest() {
         Student[] arr1 = {new Student("Ivan", "Ivanov", 4.2), new Student("Alex", "Alexeev", 6.0),
                 new Student("Nikita", "Nikitin", 7.1), new Student("Marina", "Moiseeva", 7.0)};
         Student[] arr2 = {new Student("Anna", "Mikhaylova", 5.5), new Student("Stepan", "Stepanov", 3.7),
