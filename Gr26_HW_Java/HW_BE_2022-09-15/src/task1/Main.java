@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-
 public class Main {
     //    Дана строка (для простоты можно считать,  слова разделены одним пробелом и строка не содержит знаков препинание и т.д.).
 //    Используя стрим, получить map<String, Integer> где ключ – слово, значение – сколько раз это слово встречается в строке.
