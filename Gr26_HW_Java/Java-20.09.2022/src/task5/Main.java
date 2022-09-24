@@ -39,5 +39,7 @@ public class Main {
                 .collect(Collectors.toMap(s -> s.getFirstName() + " " + s.getGender(), Student::getRate));
     }
 
+    
+
 }
 
