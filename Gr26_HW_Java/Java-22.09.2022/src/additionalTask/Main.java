@@ -1,8 +1,6 @@
 package additionalTask;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -28,6 +26,6 @@ public class Main {
     }
 
     private static Stream<String> splitting(String str) {
-        return Arrays.stream(str.split("[\\s, ]+"));
+        return Arrays.stream(str.split("[\\s,]+"));
     }
 }
