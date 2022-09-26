@@ -14,7 +14,7 @@ public class Main {
     }
 
     public static String task2(String[] arr) {
-        return String.join("", arr);   //possible also to use .reduce((s1,s2)->(String::concat);
+        return String.join("", arr);  //possible also to use .reduce((s1,s2)->(String::concat);
     }
 }
 
