@@ -12,7 +12,7 @@ public class Main {
         intsList.add(-14);
         intsList.add(16);
 
-        TestObject testObject1 = new TestObject("Maria", );
+        TestObject testObject1 = new TestObject("Maria",12 );
         TestObject testObject2 = new TestObject("Ivan" , 28);
         TestObject testObject3 = new TestObject("Maria", 0);
         TestObject testObject4 = new TestObject("Ivan" , null);
@@ -23,14 +23,6 @@ public class Main {
         newlist.add(testObject4);
 
         testObject2.checkIntNull(testObject2);
-
-
-
-        //  System.out.println(intsList);
-
-        //    pairCheck(intsList, -4);
-        //   System.out.println("---------");
-      //  System.out.println(pairCheck1(intsList, 4));
     }
 
     public static void pairCheck(List<Integer> intsList, int s) {  //Method1: with simple print of elements of pairs
@@ -69,10 +61,6 @@ public class Main {
         }
         return newIntList;
     }
-
-
-
-
 
 }
 

@@ -1,7 +1,5 @@
 package task3;
 
-import java.util.List;
-
 public class Author {
     private String fName;
     private String lName;

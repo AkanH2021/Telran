@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
     /* Given a list of Person (String name, List<BankAccount> accounts) . BankAccount is the class with following fields:

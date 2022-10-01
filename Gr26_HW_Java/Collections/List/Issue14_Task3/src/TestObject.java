@@ -7,7 +7,6 @@ public class TestObject {
         this.testValue = testValue;
     }
 
-
     public String getTestName() {
         return testName;
     }
@@ -26,7 +25,5 @@ public class TestObject {
         {
             System.out.println("Integer Is  Not Null");
         }
-
     }
-
 }
