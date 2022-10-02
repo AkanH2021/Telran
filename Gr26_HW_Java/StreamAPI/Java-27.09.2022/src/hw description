@@ -1,0 +1,9 @@
+Java - 27.09.2022
+
+Do your homework of 2 choices. The first task is easy, the second is more difficult. We wish you good luck!
+First level: По аналогии с уроком
+    Создать ENUM
+    Создать класс который читает и пишет в какой либо файл
+
+Second level: - Если будет время, можно сделать какой либо метод который читает файл и
+обрабатывает его стримом а потом перезаписыват этот файл сновас учетом обработки стримом
