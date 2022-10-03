@@ -1,5 +1,7 @@
 package tasksLevel1.tasksLevel2;
 
+import lombok.Getter;
+import lombok.ToString;
 import java.io.*;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -25,8 +27,6 @@ public class Main {
              ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("cars.bin"))) {
             outputStream.writeObject(carList);
             cars = new ArrayList<>((Collection<? extends Car>) inputStream.readObject());
-            //        System.out.println(cars);
-
 
         } catch (IOException | ClassNotFoundException ex) {
             throw new RuntimeException(ex);
@@ -50,9 +50,9 @@ public class Main {
                         s.getHorsepower())
                 .collect(Collectors.joining(" ")).split("[\\s,]+");
     }
-
-
 }
+@Getter
+@ToString
 
 class Car implements Serializable {
     private final String model;
@@ -67,37 +67,6 @@ class Car implements Serializable {
         this.clas = clas;
         this.year = year;
         this.horsepower = horsepower;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getClas() {
-        return clas;
-    }
-
-    public String getYear() {
-        return year;
-    }
-
-    public String getHorsepower() {
-        return horsepower;
-    }
-
-    @Override
-    public String toString() {
-        return "Car{" +
-                "model='" + model + '\'' +
-                ", name='" + name + '\'' +
-                ", clas='" + clas + '\'' +
-                ", year='" + year + '\'' +
-                ", horsepower='" + horsepower + '\'' +
-                '}';
     }
 }
 
