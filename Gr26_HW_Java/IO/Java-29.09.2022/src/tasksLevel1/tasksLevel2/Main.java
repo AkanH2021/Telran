@@ -26,6 +26,7 @@ public class Main {
         try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream("cars.bin"));
              ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("cars.bin"))) {
             outputStream.writeObject(carList);
+
             cars = new ArrayList<>((Collection<? extends Car>) inputStream.readObject());
 
         } catch (IOException | ClassNotFoundException ex) {
