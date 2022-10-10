@@ -10,16 +10,16 @@ public class Main {
          отдельный файл первые 601 байт, затем в отдельный файл записать следующие 57053 байта и
          оставшиеся 22494 байта записать в следующий файл. Если все сделано правильно, у вас должно получиться 3 файла.*/
     public static void main(String[] args) {
-        String filePath = "exampleFile.dat";
+        String filePath = "src/exampleFile.dat";
         byte[] bytes;
         try {
             bytes = Files.readAllBytes(Paths.get(filePath));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        Path path1 = Paths.get("part1.dat");
-        Path path2 = Paths.get("part2.dat");
-        Path path3 = Paths.get("part3.dat");
+        Path path1 = Paths.get("src/part1.dat");
+        Path path2 = Paths.get("src/part2.dat");
+        Path path3 = Paths.get("src/part3.dat");
         System.out.println(bytes.length);
 
         byte[] bytes1 = new byte[601];
